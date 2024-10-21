@@ -4,13 +4,27 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 9649:
+/***/ 8672:
 /***/ ((module) => {
 
 // Exports
 module.exports = {
-	"style": {"fontFamily":"'__Noto_Sans_KR_b97d0d', '__Noto_Sans_KR_Fallback_b97d0d'","fontStyle":"normal"},
-	"className": "__className_b97d0d"
+	"container": "Container_container__e2It7",
+	"page": "Container_page__f4lp3"
+};
+
+
+/***/ }),
+
+/***/ 290:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"header": "Header_header__l1qoc",
+	"container": "Header_container__2E6BT",
+	"logo": "Header_logo__DFVkO",
+	"setting": "Header_setting__j1zyh"
 };
 
 
@@ -61,26 +75,74 @@ function useTheme() {
 
 /***/ }),
 
-/***/ 6004:
+/***/ 829:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ App)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _next_font_google_target_css_path_pages_app_js_import_Noto_Sans_KR_arguments_weight_400_700_subsets_variableName_notoSansKR___WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(9649);
-/* harmony import */ var _next_font_google_target_css_path_pages_app_js_import_Noto_Sans_KR_arguments_weight_400_700_subsets_variableName_notoSansKR___WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_next_font_google_target_css_path_pages_app_js_import_Noto_Sans_KR_arguments_weight_400_700_subsets_variableName_notoSansKR___WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(968);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9605);
-/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5221);
-/* harmony import */ var _components_Container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8943);
-/* harmony import */ var _lib_ThemeContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(2784);
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ App)
+});
+
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(997);
+// EXTERNAL MODULE: ./components/Container.module.css
+var Container_module = __webpack_require__(8672);
+var Container_module_default = /*#__PURE__*/__webpack_require__.n(Container_module);
+;// CONCATENATED MODULE: ./components/Container.js
+
+
+function Container({ className ="" , page =false , children  }) {
+    const classNames = `${(Container_module_default()).container} ${page ? (Container_module_default()).page : ""} ${className}`;
+    return /*#__PURE__*/ jsx_runtime_.jsx("div", {
+        className: classNames,
+        children: children
+    });
+}
+
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__(1664);
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
+// EXTERNAL MODULE: ./components/Header.module.css
+var Header_module = __webpack_require__(290);
+var Header_module_default = /*#__PURE__*/__webpack_require__.n(Header_module);
+;// CONCATENATED MODULE: ./components/Header.js
+
+
+
+
+function Header() {
+    return /*#__PURE__*/ jsx_runtime_.jsx("header", {
+        className: (Header_module_default()).header,
+        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(Container, {
+            className: (Header_module_default()).container,
+            children: [
+                /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                    className: (Header_module_default()).logo,
+                    href: "/",
+                    children: "CodietMall"
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                    className: (Header_module_default()).setting,
+                    href: "/setting",
+                    children: "Setting"
+                })
+            ]
+        })
+    });
+}
+
+// EXTERNAL MODULE: external "next/head"
+var head_ = __webpack_require__(968);
+var head_default = /*#__PURE__*/__webpack_require__.n(head_);
+// EXTERNAL MODULE: ./lib/ThemeContext.js
+var ThemeContext = __webpack_require__(2784);
+// EXTERNAL MODULE: ./styles/global.css
+var global = __webpack_require__(9605);
+;// CONCATENATED MODULE: ./pages/_app.js
 
 
 
@@ -88,19 +150,24 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function App({ Component , pageProps  }) {
-    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
         children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_head__WEBPACK_IMPORTED_MODULE_1___default()), {
-                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("title", {
-                    children: "Codeitmall"
-                })
-            }),
-            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_lib_ThemeContext__WEBPACK_IMPORTED_MODULE_5__/* .ThemeProvider */ .f6, {
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)((head_default()), {
                 children: [
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Header__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {}),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Container__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
-                        className: (_next_font_google_target_css_path_pages_app_js_import_Noto_Sans_KR_arguments_weight_400_700_subsets_variableName_notoSansKR___WEBPACK_IMPORTED_MODULE_6___default().className),
-                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Component, {
+                    /*#__PURE__*/ jsx_runtime_.jsx("title", {
+                        children: "Codeitmall"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("link", {
+                        rel: "icon",
+                        href: "/favicon.ico"
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(ThemeContext/* ThemeProvider */.f6, {
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx(Header, {}),
+                    /*#__PURE__*/ jsx_runtime_.jsx(Container, {
+                        children: /*#__PURE__*/ jsx_runtime_.jsx(Component, {
                             ...pageProps
                         })
                     })
@@ -223,7 +290,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [664,221], () => (__webpack_exec__(6004)));
+var __webpack_exports__ = __webpack_require__.X(0, [664], () => (__webpack_exec__(829)));
 module.exports = __webpack_exports__;
 
 })();

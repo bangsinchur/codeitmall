@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import ProductList from "@/components/ProductList";
-import SearchForm from "@/components/SearchForm";
-import axios from "@/lib/axios";
-import styles from "@/styles/Search.module.css";
-import Head from "next/head";
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import ProductList from '@/components/ProductList';
+import SearchForm from '@/components/SearchForm';
+import axios from '@/lib/axios';
+import styles from '@/styles/Search.module.css';
 
 export default function Search() {
   const [products, setProducts] = useState([]);
@@ -20,6 +20,7 @@ export default function Search() {
   useEffect(() => {
     getProducts(q);
   }, [q]);
+
 
   return (
     <>

@@ -1,25 +1,19 @@
-import Head from "next/head";
-import "@/styles/global.css";
-import Header from "@/components/Header";
-import Container from "@/components/Container";
-import { ThemeProvider } from "@/lib/ThemeContext";
-import { Noto_Sans_KR } from '@next/font/google';
+import Container from '@/components/Container';
+import Header from '@/components/Header';
+import Head from 'next/head';
+import { ThemeProvider } from '@/lib/ThemeContext';
+import '@/styles/global.css';
 
-
-const notoSansKR = Noto_Sans_KR({
-  weight: ['400', '700'],
-  subsets: [],
-});
 export default function App({ Component, pageProps }) {
-  
   return (
     <>
-    <Head>
-      <title>Codeitmall</title>
-    </Head>
+      <Head>
+        <title>Codeitmall</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <ThemeProvider>
         <Header />
-        <Container className={notoSansKR.className}>
+        <Container>
           <Component {...pageProps} />
         </Container>
       </ThemeProvider>
